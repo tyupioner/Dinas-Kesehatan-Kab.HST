@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dinas Kesehatan Kab.HST</title>
+  <title>Linktree Tyupionerr</title>
   <style>
     body {
       margin: 0;
@@ -16,7 +16,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start;
       padding-top: 40px;
     }
 
@@ -66,6 +65,20 @@
       transform: scale(1.03);
     }
 
+    .spoiler-button {
+      background-color: #ffae00;
+      color: black;
+    }
+
+    .spoiler-content {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
     footer {
       margin-top: 40px;
       font-size: 12px;
@@ -75,18 +88,31 @@
 </head>
 <body>
   <img class="profile-pic" src="https://i.imgur.com/DPVM1cG.jpg" alt="Foto Profil" />
-  <h1>Dinas Kesehatan</h1>
-  <p class="bio"></p>
+  <h1>Tyupionerr</h1>
+  <p class="bio">Pengembang • Teknologi • Konten Kreator</p>
 
   <div class="links">
-    <a class="link-button" href="https://linktr.ee/Nominatif" target="_blank">Data Nominatif</a>
+    <a class="link-button" href="https://instagram.com/tyupionerr" target="_blank">Instagram</a>
     <a class="link-button" href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
     <a class="link-button" href="https://youtube.com/tyupionerr" target="_blank">YouTube</a>
-    <a class="link-button" href="https://github.com/tyupionerr" target="_blank">GitHub</a>
+
+    <!-- Spoiler Button -->
+    <button class="link-button spoiler-button" onclick="toggleSpoiler()">Tampilkan Spoiler</button>
+    <div id="spoiler" class="spoiler-content">
+      🎁 Kode Promo Rahasia: <strong>TYUPI2025</strong><br>
+      Berlaku sampai 31 Juli 2025.
+    </div>
   </div>
 
   <footer>
     © 2025 Tyupionerr
   </footer>
+
+  <script>
+    function toggleSpoiler() {
+      const spoiler = document.getElementById('spoiler');
+      spoiler.style.display = (spoiler.style.display === 'none' || spoiler.style.display === '') ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
